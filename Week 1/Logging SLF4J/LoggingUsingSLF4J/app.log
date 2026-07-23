@@ -1,0 +1,4 @@
+11:47:51.368 [main] DEBUG c.cognizant.logging.LoggingExample3 - This is a DEBUG message
+11:47:51.371 [main] INFO  c.cognizant.logging.LoggingExample3 - This is an INFO message
+11:47:51.372 [main] WARN  c.cognizant.logging.LoggingExample3 - This is a WARNING message
+11:47:51.373 [main] ERROR c.cognizant.logging.LoggingExample3 - This is an ERROR message
