@@ -1,0 +1,411 @@
+# GIT HANDS-ON
+
+#GIT-1: Creating and Working with a Git Repository
+
+### Command
+
+`git init`
+
+**Description:**
+Initializes a Git repository inside the current directory.
+
+---
+
+### Command
+
+`git status`
+
+**Description:**
+Displays the current state of the repository, including tracked, untracked, and modified files.
+
+---
+
+### Command
+
+`git add .`
+
+**Description:**
+Adds all the current changes and files to the staging area.
+
+---
+
+### Command
+
+`git commit -m "Initial Commit"`
+
+**Description:**
+Creates a commit containing the staged files with the given commit message.
+
+---
+
+### Command
+
+`git log`
+
+**Description:**
+Shows the detailed history of commits made in the repository.
+
+---
+
+### Command
+
+`git log --oneline`
+
+**Description:**
+Shows the commit history in a shorter, one-line format.
+
+---
+
+# GIT-2: Git User Configuration
+
+### Command
+
+`git config --global user.name "Your Name"`
+
+**Description:**
+Configures the username that Git will associate with commits.
+
+---
+
+### Command
+
+`git config --global user.email "yourmail@gmail.com"`
+
+**Description:**
+Configures the email address associated with Git commits.
+
+---
+
+### Command
+
+`git config --list`
+
+**Description:**
+Lists the Git configuration settings currently available.
+
+---
+
+### Command
+
+`git --version`
+
+**Description:**
+Displays the version of Git installed on the system.
+
+---
+
+# GIT-3: Working with Branches
+
+### Command
+
+`git branch`
+
+**Description:**
+Displays the branches available in the current repository.
+
+---
+
+### Command
+
+`git branch feature`
+
+**Description:**
+Creates a new branch with the name `feature`.
+
+---
+
+### Command
+
+`git checkout feature`
+
+**Description:**
+Moves from the current branch to the `feature` branch.
+
+---
+
+### Command
+
+`git checkout -b demo`
+
+**Description:**
+Creates a branch called `demo` and immediately switches to it.
+
+---
+
+### Command
+
+`git checkout main`
+
+**Description:**
+Switches back to the `main` branch.
+
+---
+
+### Command
+
+`git merge feature`
+
+**Description:**
+Combines the changes from the `feature` branch into the branch that is currently active.
+
+---
+
+### Command
+
+`git branch -d feature`
+
+**Description:**
+Deletes the `feature` branch after it is no longer required.
+
+---
+
+# GIT-4: Working with Remote Repositories
+
+### Command
+
+`git remote -v`
+
+**Description:**
+Displays the remote repositories and their associated URLs.
+
+---
+
+### Command
+
+`git remote add origin https://github.com/USERNAME/REPOSITORY.git`
+
+**Description:**
+Connects the local Git repository to the specified GitHub repository using the remote name `origin`.
+
+---
+
+### Command
+
+`git push -u origin main`
+
+**Description:**
+Pushes the local `main` branch to the remote GitHub repository and sets it as the upstream branch.
+
+---
+
+### Command
+
+`git pull origin main`
+
+**Description:**
+Retrieves the latest changes from the remote `main` branch and integrates them into the local repository.
+
+---
+
+### Command
+
+`git fetch`
+
+**Description:**
+Retrieves updates from the remote repository without automatically merging them into the current branch.
+
+---
+
+### Command
+
+`git clone https://github.com/USERNAME/REPOSITORY.git`
+
+**Description:**
+Creates a local copy of an existing remote GitHub repository.
+
+---
+
+# GIT-5: Reverting and Managing Changes
+
+### Command
+
+`git diff`
+
+**Description:**
+Displays the differences between the current changes and the existing version of files.
+
+---
+
+### Command
+
+`git restore filename`
+
+**Description:**
+Discards changes made to the specified file and restores its previous version.
+
+---
+
+### Command
+
+`git restore --staged filename`
+
+**Description:**
+Removes the specified file from the staging area while keeping its modifications.
+
+---
+
+### Command
+
+`git reset --soft HEAD~1`
+
+**Description:**
+Removes the most recent commit while preserving the changes.
+
+---
+
+### Command
+
+`git reset --hard HEAD~1`
+
+**Description:**
+Removes the latest commit along with the changes associated with it.
+
+---
+
+### Command
+
+`git rm filename`
+
+**Description:**
+Removes the specified file from the Git repository.
+
+---
+
+### Command
+
+`git mv oldname.txt newname.txt`
+
+**Description:**
+Renames or moves a file within the Git repository.
+
+---
+
+# FREQUENTLY USED GIT COMMANDS
+
+`git init`
+Creates a new Git repository.
+
+`git status`
+Checks the current repository status.
+
+`git add .`
+Stages all changes.
+
+`git commit -m "message"`
+Saves the staged changes as a new commit.
+
+`git log`
+Displays the complete commit history.
+
+`git log --oneline`
+Displays a compact version of the commit history.
+
+`git branch`
+Lists the available branches.
+
+`git checkout branch_name`
+Switches to the specified branch.
+
+`git merge branch_name`
+Merges another branch into the current branch.
+
+`git remote -v`
+Displays configured remote repositories.
+
+`git push origin main`
+Pushes the local `main` branch to the remote repository.
+
+`git pull origin main`
+Retrieves and merges the latest changes from the remote `main` branch.
+
+`git clone repository_url`
+Creates a local copy of a remote repository.
+
+`git diff`
+Shows differences between file versions.
+
+`git restore filename`
+Discards modifications made to a file.
+
+`git reset --soft HEAD~1`
+Removes the latest commit while retaining the changes.
+
+`git reset --hard HEAD~1`
+Removes the latest commit along with its changes.
+
+---
+
+# SAMPLE GIT WORKFLOW
+
+The following sequence demonstrates a complete Git workflow:
+
+`mkdir GitAssignment`
+
+Creates a new directory named `GitAssignment`.
+
+`cd GitAssignment`
+
+Moves into the newly created directory.
+
+`git init`
+
+Initializes Git in the directory.
+
+`notepad file1.txt`
+
+Creates or opens `file1.txt` using Notepad.
+
+`git status`
+
+Checks the current repository status.
+
+`git add .`
+
+Stages the files for committing.
+
+`git commit -m "Created first file"`
+
+Creates a commit for the first file.
+
+`git branch feature`
+
+Creates a new branch named `feature`.
+
+`git checkout feature`
+
+Switches to the newly created `feature` branch.
+
+`notepad file2.txt`
+
+Creates or opens another file named `file2.txt`.
+
+`git add .`
+
+Stages the newly created file.
+
+`git commit -m "Added second file"`
+
+Commits the second file.
+
+`git checkout main`
+
+Returns to the `main` branch.
+
+`git merge feature`
+
+Merges the work completed in the `feature` branch into `main`.
+
+`git log --oneline`
+
+Displays the commit history in compact form.
+
+`git remote add origin https://github.com/USERNAME/REPOSITORY.git`
+
+Links the local repository with the GitHub repository.
+
+`git push -u origin main`
+
+Uploads the local `main` branch to GitHub.
+
+---
+
