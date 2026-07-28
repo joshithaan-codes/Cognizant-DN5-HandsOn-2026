@@ -1,0 +1,19 @@
+.home {
+  padding: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  margin-top: 20px;
+}

@@ -1,0 +1,10 @@
+.profile {
+  margin: 30px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  max-width: 500px;
+}
+
+.profile p {
+  margin: 15px 0;
+}

@@ -1,0 +1,70 @@
+<div class="profile">
+
+  <h1>Student Profile</h1>
+
+  <p>
+    <strong>Name:</strong>
+    {{ student.name }}
+  </p>
+
+  <p>
+    <strong>Register Number:</strong>
+    {{ student.registerNumber }}
+  </p>
+
+  <p>
+    <strong>Department:</strong>
+    {{ student.department }}
+  </p>
+
+  <p>
+    <strong>Semester:</strong>
+    {{ student.semester }}
+  </p>
+
+  <p>
+    <strong>CGPA:</strong>
+    {{ student.cgpa | number:'1.2-2' }}
+  </p>
+
+  <hr>
+
+  <h2>Enrolled Courses</h2>
+
+  <p *ngIf="enrolledCourses.length === 0">
+    No courses enrolled yet.
+  </p>
+
+  <div *ngIf="enrolledCourses.length > 0">
+
+    <div
+      *ngFor="let course of enrolledCourses"
+      class="enrolled-course">
+
+      <h3>{{ course.name }}</h3>
+
+      <p>
+        <strong>Course Code:</strong>
+        {{ course.code }}
+      </p>
+
+      <p>
+        <strong>Credits:</strong>
+        {{ course.credits }}
+      </p>
+
+      <p>
+        <strong>Status:</strong>
+        {{ course.gradeStatus | titlecase }}
+      </p>
+
+    </div>
+
+    <p>
+      <strong>Total Enrolled Courses:</strong>
+      {{ enrolledCourses.length }}
+    </p>
+
+  </div>
+
+</div>

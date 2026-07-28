@@ -1,0 +1,76 @@
+<div class="form-container">
+
+  <h1>Course Enrollment Request</h1>
+
+  <form #enrollForm="ngForm" (ngSubmit)="onSubmit(enrollForm)">
+
+    <label>Student Name</label>
+    <input
+      type="text"
+      name="studentName"
+      [(ngModel)]="model.studentName"
+      #studentName="ngModel"
+      required
+      minlength="3">
+
+    <div class="error"
+         *ngIf="studentName.invalid && studentName.touched">
+      Name is required and must contain at least 3 characters.
+    </div>
+
+    <label>Email</label>
+    <input
+      type="email"
+      name="studentEmail"
+      [(ngModel)]="model.studentEmail"
+      #studentEmail="ngModel"
+      required
+      email>
+
+    <div class="error"
+         *ngIf="studentEmail.invalid && studentEmail.touched">
+      Enter a valid email address.
+    </div>
+
+    <label>Course ID</label>
+    <input
+      type="number"
+      name="courseId"
+      [(ngModel)]="model.courseId"
+      required>
+
+    <label>Preferred Semester</label>
+    <select
+      name="preferredSemester"
+      [(ngModel)]="model.preferredSemester"
+      required>
+
+      <option value="">Select Semester</option>
+      <option value="Odd">Odd</option>
+      <option value="Even">Even</option>
+
+    </select>
+
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        name="agreeToTerms"
+        [(ngModel)]="model.agreeToTerms"
+        required>
+
+      I agree to the terms
+    </label>
+
+    <button
+      type="submit"
+      [disabled]="enrollForm.invalid">
+      Submit Enrollment
+    </button>
+
+  </form>
+
+  <p *ngIf="submitted" class="success">
+    Enrollment request submitted successfully!
+  </p>
+
+</div>

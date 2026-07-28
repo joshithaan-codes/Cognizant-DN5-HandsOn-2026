@@ -1,0 +1,83 @@
+<div class="form-container">
+
+  <h1>Student Registration</h1>
+
+  <form
+    [formGroup]="registrationForm"
+    (ngSubmit)="onSubmit()">
+
+    <label>Full Name</label>
+
+    <input
+      type="text"
+      formControlName="fullName">
+
+    <div
+      class="error"
+      *ngIf="
+        registrationForm.get('fullName')?.invalid &&
+        registrationForm.get('fullName')?.touched
+      ">
+      Name must contain at least 3 characters.
+    </div>
+
+
+    <label>Email</label>
+
+    <input
+      type="email"
+      formControlName="email">
+
+    <div
+      class="error"
+      *ngIf="
+        registrationForm.get('email')?.invalid &&
+        registrationForm.get('email')?.touched
+      ">
+      Enter a valid email.
+    </div>
+
+
+    <label>Password</label>
+
+    <input
+      type="password"
+      formControlName="password">
+
+    <div
+      class="error"
+      *ngIf="
+        registrationForm.get('password')?.invalid &&
+        registrationForm.get('password')?.touched
+      ">
+      Password must contain at least 6 characters.
+    </div>
+
+
+    <label>Department</label>
+
+    <select formControlName="department">
+
+      <option value="">Select Department</option>
+      <option value="IT">Information Technology</option>
+      <option value="CSE">Computer Science</option>
+      <option value="ECE">Electronics</option>
+
+    </select>
+
+
+    <button
+      type="submit"
+      [disabled]="registrationForm.invalid">
+      Register
+    </button>
+
+  </form>
+
+  <p
+    class="success"
+    *ngIf="submitted">
+    Student registered successfully!
+  </p>
+
+</div>
